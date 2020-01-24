@@ -3,9 +3,9 @@
 
 def key_for_min_value(name_hash)
   answer = nil
-  min = 10*10
+  min = nil
   name_hash.each do|key, value|
-   if value < min 
+   if min == nil || value < min
     min = value
     answer = key
    end
