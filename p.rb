@@ -1,5 +1,4 @@
-# prereqs: iterators, hashes, conditional logic
-# Given a hash with numeric values, return the key for the smallest value
+name_hash = {:chair => 25, :table => 85, :mattress => 450}
 
 def key_for_min_value(name_hash)
   if name_hash.empty? 
@@ -14,6 +13,8 @@ def key_for_min_value(name_hash)
     end
   end
   new_hash = name_hash.select {|key, value| name_hash[key] == ref}
-  new_array = new_hash.collect {|key, value| key}
-  new_array[0]
+  new_array = new_hash.collect {|key, value| key.to_s}
+  puts new_array
 end
+
+key_for_min_value(name_hash)
